@@ -14,15 +14,44 @@
     </header>
 
     <main>
-        <aside>
-            <form id="resoureForm">
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="text" id="price" placeholder="Price" required>
-                <input type="text" id="stock" placeholder="In Stock" required>
-                <button type="submit">Submit</button>
-            </form>
-        </aside>
+        <section id="bookDisplay">
+            <div class="book-item">
+                <img class="book-item__image" src="Assests/images/100YearsOfSolitude.jpg" alt="Book cover" />
+                <div class="book-item__details">
+                    <h2 class="book-item__title">One Hundred Years of Solitude</h2>
+                    <p class="book-item__author">Gabriel Garcia Marquez</p>
+                    <p class="book-item__price">$11.32</p>
+                    <p class="book-item__stock">In Stock</p>
+                </div>
+                <button class="book-item__remove-btn">🗑️ Remove</button>
+            </div>
+        </section>
+
+        <aside class="book-form">
+            <form id="bookForm" class="form">
+                <label for="title" class="form__label">Title:</label>
+                <input type="text" id="title" class="form__input" placeholder="Title" required>
+
+                <label for="author" class="form__label">Author:</label>
+                <input type="text" id="author" class="form__input" placeholder="Author" required>
+
+                <label for="imageUrl" class="form__label">Image URL:</label>
+                <input type="url" id="imageUrl" class="form__input" placeholder="Image URL" required>
+
+                <label for="price" class="form__label">Price:</label>
+                <input type="number" id="price" class="form__input" placeholder="Price" required>
+
+                <label for="stock" class="form__label">In Stock:</label>
+                <select id="stock" class="form__select" required>
+                    <option value="">Select...</option>
+                    <option value="inStock">In Stock</option>
+                    <option value="outOfStock">Out of Stock</option>
+                </select>
+
+                <button type="submit" class="form__button">Add Book</button>
+
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
